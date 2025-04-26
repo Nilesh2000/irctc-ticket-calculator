@@ -59,6 +59,7 @@ func (s *FixedTicketPriceCalculator) Calculate(req *TicketBookingRequest) (total
 	return
 }
 
+// validateRequest validates the request.
 func (s *FixedTicketPriceCalculator) validateRequest(req *TicketBookingRequest) error {
 	if req.TrainNumber == "" {
 		return ErrEmptyTrainNumber
